@@ -19,126 +19,128 @@
   </head>
 
   <body>
-    <nav id="navbar">
-      <div id="logo">
-        <img src="./images/logo.png" alt="Kapture Foods" />
-      </div>
-      <ul>
-        <li class="item">
-          <a href="learning.html">Title1</a>
-        </li>
-        <li class="item">
-          <a href="learning.html">Title2</a>
-        </li>
-        <li class="item">
-          <a href="learning.html">Title3</a>
-        </li>
-        <li class="item">
-          <a href="learning.html">Title4</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="parent">
+      {{!-- NavBar --}}
+      <nav id="navbar">
+        {{!-- <div id="logo">
+          <img src="./images/logo.png" alt="Kapture Foods" />
+        </div> --}}
+        <ul>
+          <li class="item">
+            <a href="learning.html">Title1</a>
+          </li>
+          <li class="item">
+            <a href="learning.html">Title2</a>
+          </li>
+          <li class="item">
+            <a href="learning.html">Title3</a>
+          </li>
+          <li class="item">
+            <a href="learning.html">Title4</a>
+          </li>
+        </ul>
+      </nav>
 
-    <section id="home">
-      <h1 class="headingprimary">
-        This is a sample Heading
-      </h1>
-      <p>
-        This is a paragraph tag we need to fill it with some text
-      </p>
-      <p>
-        This is another para tag.
-      </p>
-      <a href="learning.html">
-        <button class="btn">
-          schedule call button optional
-        </button>
-      </a>
-    </section>
-
-    <div id="main">
-      <div class="floor">
-
-        <h2><a href="/floor1" onclick="disTab()">Ground Floor</a></h2>
-
-      </div>
-      <div class="floor">
-
-        <h2><a href="/floor2" onclick="disTab()">First Floor</a></h2>
-
-      </div>
-      <div class="floor">
-
-        <h2><a href="/floor3" onclick="disTab()">Second Floor</a></h2>
-
-      </div>
-    </div>
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        {{! <div class="numbertext">1 / 3</div> }}
-        <img src="./images/hostel1.png" style="width:100%" />
-        {{! <div class="text">Caption Text</div> }}
+      <div id="home">
+        <section id="homeleft">
+          <h1 class="headingprimary" style="padding: 1rem;">
+            This is a sample Heading
+          </h1>
+          <p style="padding: 0.7rem;"> 
+            This is a paragraph tag we need to fill it with some text
+          </p>
+          <p style="padding: 0.5rem;">
+            This is another para tag.
+          </p>
+          <a href="learning.html">
+            <button class="btn">
+              schedule call button optional
+            </button>
+          </a>
+        </section>
+        <section id="homeright">
+          <div id="homeimg"></div>
+        </section>
       </div>
 
-      <div class="mySlides fade">
-        {{! <div class="numbertext">2 / 3</div> }}
-        <img src="./images/login pg.png" style="width:100%" />
-        {{! <div class="text">Caption Two</div> }}
+      <div id="main">
+        <div class="floor">
+          <h2><a href="/floor1" onclick="disTab()">Ground Floor</a></h2>
+        </div>
+        <div class="floor">
+          <h2><a href="/floor2" onclick="disTab()">First Floor</a></h2>
+        </div>
+        <div class="floor">
+          <h2><a href="/floor3" onclick="disTab()">Second Floor</a></h2>
+        </div>
+      </div>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          {{! <div class="numbertext">1 / 3</div> }}
+          <img src="./images/hostel1.png" style="width:100%" />
+          {{! <div class="text">Caption Text</div> }}
+        </div>
+
+        <div class="mySlides fade">
+          {{! <div class="numbertext">2 / 3</div> }}
+          <img src="./images/login pg.png" style="width:100%" />
+          {{! <div class="text">Caption Two</div> }}
+        </div>
+
+        <div class="mySlides fade">
+          {{! <div class="numbertext">3 / 3</div> }}
+          <img src="" style="width:100%" />
+          {{! <div class="text">Caption Three</div> }}
+        </div>
+
+      </div>
+      <br />
+
+      <div style="text-align:center" class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
 
-      <div class="mySlides fade">
-        {{! <div class="numbertext">3 / 3</div> }}
-        <img src="" style="width:100%" />
-        {{! <div class="text">Caption Three</div> }}
-      </div>
+      <div class="features">
+        <h2 class="fheading">Our features</h2>
 
-    </div>
-    <br />
+        <p class="fp">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Repellendus voluptas minima doloremque, sint facere ad eligendi
+          perspiciatis vitae sequi libero?</p>
+        <hr />
+        <ul style="display:flex ; justify-content: center;  ">
 
-    <div style="text-align:center" class="dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <div class="features">
-      <h2 class="fheading">Our features</h2>
-
-      <p class="fp">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Repellendus voluptas minima doloremque, sint facere ad eligendi
-        perspiciatis vitae sequi libero?</p>
-      <hr />
-      <ul style="display:flex ; justify-content: center;  ">
-
-        <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
-        <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
-        <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
-        <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
-        <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
-
-      </ul>
-      <hr />
-      <h4 class="fh4"><a href="">Know more
-          <i class="fa-solid fa-angle-down"></i></a></h4>
-    </div>
-
-    <footer>
-      <div class="footer-content">
-        <h3>Lorem ipsum do </h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <ul class="socials">
-
-          <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-          <li><a href=""><i class="fa-solid fa-square-phone"></i></a></li>
+          <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
+          <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
+          <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
+          <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
+          <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
 
         </ul>
+        <hr />
+        <h4 class="fh4"><a href="">Know more
+            <i class="fa-solid fa-angle-down"></i></a></h4>
       </div>
-      <div class="footer-bottom">
-        <p>Copyright &copy; 2022 |All rights reserved by
-          <span>Nethunt</span></p>
-      </div>
-    </footer>
+
+      <footer>
+        <div class="footer-content">
+          <h3>Lorem ipsum do </h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+          <ul class="socials">
+
+            <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href=""><i class="fa-solid fa-square-phone"></i></a></li>
+
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright &copy; 2022 |All rights reserved by
+            <span>Nethunt</span></p>
+        </div>
+      </footer>
+    </div>
     <script src="./main.js"></script>
   </body>
 
