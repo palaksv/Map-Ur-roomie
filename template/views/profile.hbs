@@ -22,7 +22,7 @@
                 </div>
                 <div class="input-box">
                     <span class="details">USN</span>
-                    <input type="text" id="usn" placeholder="Eg: 1DS20CS001" required>
+                    <input type="number" id="usn" placeholder="Eg: 103" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Branch</span>
@@ -71,6 +71,7 @@
         </div>
     </div>
 </body>
+
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
@@ -94,7 +95,7 @@
 
         var fullName = document.getElementById('fName').value;
         var bDay = document.getElementById('bday').value;
-        var deptName = document.getElementById('usn').value;
+        var Usn = document.getElementById('usn').value;
         var branchName = document.getElementById('branch').value;
         var perNum = document.getElementById('perNo').value;
         var gaurName = document.getElementById('gname').value;
@@ -105,12 +106,10 @@
         var perAdd = document.getElementById('peradd').value;
         var langKnown = document.getElementById('langknown').value;
 
-        
-    
-        set(ref(database, id), {
+        set(ref(database, 'users/' + count), {
             fullName : fullName,
             bDay : bDay,
-            usn : usn,
+            Usn : Usn,
             branchName : branchName,
             perNum : perNum,
             gaurName : gaurName,
