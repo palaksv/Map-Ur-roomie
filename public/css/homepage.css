@@ -314,7 +314,7 @@ img{
 }
 
 footer {
-  margin-top: 2.25rem;
+  margin-top: 2.15rem;
   position: relative;
   bottom: 0;
   left: 0;
@@ -401,8 +401,11 @@ footer {
   color: rgb(109, 107, 107);
 }
 .fli {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   padding: 20px;
+  justify-content: space-evenly;
+  font-size: 0.8rem;
 }
 .fimg {
   height: 85%;
