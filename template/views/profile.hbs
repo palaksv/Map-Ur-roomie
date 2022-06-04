@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Complete Profile</div>
+        <div class="form">
+            <div class="user-detail">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" id="fName" placeholder="Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Birth Date</span>
+                    <input type="date" id="bday" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">USN</span>
+                    <input type="text" id="usn" placeholder="Eg: 1DS20CS001" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Branch</span>
+                    <input type="text" id="branch" placeholder="Eg:Computer Science" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Personal Number</span>
+                    <input type="text" id="perNo" placeholder="Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Gaurdian's Name</span>
+                    <input type="text" id="gname" placeholder="Father's Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Guardian's Occupation</span>
+                    <input type="text" id="garocc" placeholder="Occupation" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Guardian's Number</span>
+                    <input type="text" id="garnum" placeholder="Phone Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Alternate Number</span>
+                    <input type="text" id="altnum" placeholder="Alternate Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">State</span>
+                    <input type="text" id="state" placeholder="State" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Permanent Address</span>
+                    <input type="text" id="peradd" placeholder="Address" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Languages Known</span>
+                    <input type="text" id="langknown" placeholder="Eg:English" required>
+                </div>
+                <div class="input-box" id="image-input">
+                    <span class="details">Upload Profile Photo</span>
+                    <input type="file" onchange="readURL(this)" accept="Image/*">
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" id="subtn" name="Submit" value="Register">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+    import { getDatabase, set, ref, push } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDwb6nqO9VaixY4hqhf53fKPEnUQbt8dQ4",
+        authDomain: "fir-basic-project-c34b5.firebaseapp.com",
+        projectId: "fir-basic-project-c34b5",
+        storageBucket: "fir-basic-project-c34b5.appspot.com",
+        messagingSenderId: "671769167140",
+        appId: "1:671769167140:web:97fbc6d75e4c4cf29e5fb1",
+        measurementId: "G-B97VPMN20N"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    var count =0;
+    subtn.addEventListener('click', (err) => {
+
+        var fullName = document.getElementById('fName').value;
+        var bDay = document.getElementById('bday').value;
+        var deptName = document.getElementById('usn').value;
+        var branchName = document.getElementById('branch').value;
+        var perNum = document.getElementById('perNo').value;
+        var gaurName = document.getElementById('gname').value;
+        var garOcc = document.getElementById('garocc').value;
+        var garNum = document.getElementById('garnum').value;
+        var altNum = document.getElementById('altnum').value;
+        var State = document.getElementById('state').value;
+        var perAdd = document.getElementById('peradd').value;
+        var langKnown = document.getElementById('langknown').value;
+
+        
+    
+        set(ref(database, id), {
+            fullName : fullName,
+            bDay : bDay,
+            usn : usn,
+            branchName : branchName,
+            perNum : perNum,
+            gaurName : gaurName,
+            garOcc : garOcc,
+            garNum : garNum,
+            altNum : altNum,
+            State : State,
+            perAdd : perAdd,
+            langKnown : langKnown
+        });
+        count++;
+    })
+</script>
+<script src="index.js"></script>
+
+</html>
