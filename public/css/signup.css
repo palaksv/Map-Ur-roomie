@@ -2,7 +2,7 @@
   font-size: 100%;
   font-size: 16px;
   line-height: 1.5;
-  --primary: #fb4e59;
+  --primary: #f6c453;
 }
 body {
   padding: 0;
@@ -42,10 +42,11 @@ a{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #ece6d8;
 }
 .left {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
-    url("../images/login\ pg.png");
+    url("../images/signin.png");
   background-size: cover;
 }
 .right .copy {
@@ -68,11 +69,6 @@ a{
   border-radius: 8px;
   font-size: 0.75rem;
   text-transform: uppercase;
-}
-.google-btn:hover {
-  background: #ff6a73;
-
-  cursor: pointer;
 }
 .right .form {
   width: 328px;
@@ -159,8 +155,9 @@ label {
   text-transform: uppercase;
 }
 .register-btn:hover {
-  background:  #ff6a73;
+  background:  #183a1d;
   cursor: pointer;
+  color: #fff;
 }
 .or {
   position: relative;

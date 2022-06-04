@@ -2,7 +2,7 @@
     font-size: 100%;
     font-size: 16px;
     line-height: 1.5;
-    --primary: #fb4e59;
+    --primary: #f6c453;
 }
 body{
     padding:0;
@@ -37,8 +37,11 @@ a{
     align-items: center;
 }
 .left{
-    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("../images/login\ pg.png");
+    background: linear-gradient(rgba(233, 228, 228, 0),rgba(155, 148, 148, 0.5)),url("../images/login.png");
     background-size: cover;
+}
+.right{
+    background-color:#ece6d8;
 }
 .right .copy{
     color: black;
@@ -47,22 +50,6 @@ a{
 .right p{
     margin: 1.5rem 0;
     font-size: 0.875rem;
-}
-.google-btn{
-    display: block;
-    width: 100%;
-    background: var(--primary);
-    color: white;
-    font-weight: 700;
-    border: none;
-    padding: 1rem;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-}
-.google-btn:hover{
-    background: rgb(213, 105, 105);
-    cursor: pointer;
 }
 .right .form{
     width: 328px;
@@ -74,7 +61,7 @@ a{
     width: 100%;
     box-sizing: border-box;
     border-radius: 8px;
-    border: 1px solid #c4c4c4;
+    border: 1px solid #183a1d;
     padding: 1rem;
     margin-bottom: 1.25rem;
     font-size: 0.875rem;
@@ -108,7 +95,7 @@ label{
 }
 .checkbox-container input:checked~.checkmark{
     background-color: var(--primary);
-    border: 1px solid rgb(209, 55, 55);
+    border: 1px solid #e1eedd;
 }
 .checkmark{
     position: absolute;
@@ -150,21 +137,10 @@ label{
     text-transform: uppercase;
 }
 .register-btn:hover{
-    background: rgb(213, 105, 105);
+    background: #183a1d;
     cursor: pointer;
+    color: #fff;
 }
-.or {
-    position: relative;
-    top: -27px;
-    left: 145px;
-    width: 40px;
-    height: 40px;
-    background: #efefef;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgbs(0, 0, 0, 0.6);
-    line-height: 40px;
-    text-align: center;
-  }
   .rightalign{
       display: flex;
       flex-direction: column;
