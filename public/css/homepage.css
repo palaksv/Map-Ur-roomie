@@ -1,5 +1,5 @@
 :root{
-  --Dgreen: #032e0ad3;
+  --Dgreen: #0df534d3;
   --Lgreen : #e1eedd;
   --orange: #f0a04b;
   --cream: #fefbe9;
@@ -130,8 +130,9 @@ body {
     width: 15rem;
   }
   .floor:hover {
-    background-color: #ff6a73;
+    background-color: var(--orange);
     opacity: 0.8;
+     
   }
   #main {
     display: flex;
@@ -265,7 +266,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #32515a;
+    background:var(--Dgreen);
     height: auto;
     width: 100%;
     font-family: "Open Sans";
@@ -313,7 +314,7 @@ body {
     color: rgba(242, 152, 164, 0.929);
   }
   .footer-bottom {
-    background: #32515a;
+    background: var(--Dgreen);
     width: 100%;
     padding: 10px 0;
     text-align: center;
