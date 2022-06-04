@@ -1,0 +1,23 @@
+{
+  "name": "hackman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoDev-Hackman/Hackman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoDev-Hackman/Hackman/issues"
+  },
+  "homepage": "https://github.com/CoDev-Hackman/Hackman#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
