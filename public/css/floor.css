@@ -1,5 +1,8 @@
 
+body{
+  background-color: #e1eedd;
 
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -17,7 +20,10 @@ table {
   }
   
   tr:nth-child(even) {
-    background-color: #ece6d8;
+    background-color: #f0ce80;
+  }
+  tr:nth-child(odd) {
+    background-color: #ffffff;
   }
   
   h2 {
