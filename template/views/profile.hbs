@@ -22,7 +22,7 @@
                 </div>
                 <div class="input-box">
                     <span class="details">USN</span>
-                    <input type="number" id="usn" placeholder="Eg: 103" required>
+                    <input type="text" id="usn" placeholder="Eg: 1DS20CS103" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Branch</span>
@@ -90,7 +90,6 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
-    var count =0;
     subtn.addEventListener('click', (err) => {
 
         var fullName = document.getElementById('fName').value;
@@ -106,7 +105,7 @@
         var perAdd = document.getElementById('peradd').value;
         var langKnown = document.getElementById('langknown').value;
 
-        set(ref(database, 'users/' + count), {
+        set(ref(database, 'users/' + Usn), {
             fullName : fullName,
             bDay : bDay,
             Usn : Usn,
@@ -120,7 +119,6 @@
             perAdd : perAdd,
             langKnown : langKnown
         });
-        count++;
     })
 </script>
 <script src="index.js"></script>
