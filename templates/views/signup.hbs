@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <div class="split-screen">
+        <div class="left">
+        </div>
+        <div class="right">
+            <section class="googlesignup">
+                <h2>Get Started</h2>
+                <div class="login-container">
+                    <p>Already have an account? <a href="/login" class="anchor"><strong>Log In</strong></a> </p>
+                </div>
+                <button class="google-btn">Sign Up with Google</button>
+            </section>
+            <br>
+            <form>
+                <div class="ordiv">
+                    <hr>
+                    <div class="or">or</div>
+                </div>
+            
+                <div class="input-container">
+                    <label for="fname">Full Name</label>
+                    <input id="fname" name="fname" type="text" placeholder="Full Name" required>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email address</label>
+                    <input id="email" name="email" type="email" placeholder="Email" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Password" required>
+                    <i class="far fa-eye-slash"></i>
+                </div>
+                {{!-- <div class="input-container cta"> --}}
+                    <!-- <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Sign Up for email updates.
+                    </label> -->
+                {{!-- </div> --}}
+                <button class="register-btn" type="submit">Register</button>
+                </section>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
