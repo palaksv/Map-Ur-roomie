@@ -1,5 +1,4 @@
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,8 +20,12 @@
   </head>
 
   <body>
+  <div class="parent">
+    {{!-- NavBar --}}
     <nav id="navbar">
-     
+      {{!-- <div id="logo">
+        <img src="./images/logo.png" alt="Kapture Foods" />
+      </div> --}}
       <ul>
         <li class="item">
           <a href="learning.html">Title1</a>
@@ -39,23 +42,27 @@
       </ul>
     </nav>
 
-    <section id="home">
-      <h1 class="headingprimary">
-        This is a sample Heading
-      </h1>
-      <p>
-        This is a paragraph tag we need to fill it with some text
-      </p>
-      <p>
-        This is another para tag.
-      </p>
-      <a href="learning.html">
-        <button class="btn">
-          schedule call button optional
-        </button>
-      </a>
-    </section>
-
+    <div id="home">
+      <section id="homeleft">
+        <h1 class="headingprimary" style="padding: 1rem; font-size:2rem;">
+          Home Away From Home
+        </h1>
+        <p style="padding: 0.7rem;">
+          sddfgyh
+        </p>
+        <p style="padding: 0.5rem;">
+          This is another para tag.
+        </p>
+        <a href="learning.html">
+          <button class="btn" id="schedule">
+            schedule call button optional
+          </button>
+        </a>
+      </section>
+      <section id="homeright">
+        <img src="./images/homeimgnobg.png" id="homeimg" alt="">
+      </section>
+    </div>
     <div id="main" data-aos="fade-up">
       <div class="floor" data-aos="fade-up">
 
@@ -63,14 +70,10 @@
 
       </div>
       <div class="floor" data-aos="fade-up">
-
         <h2><a href="/floor2" onclick="disTab()">First Floor</a></h2>
-
       </div>
       <div class="floor" data-aos="fade-up">
-
         <h2><a href="/floor3" onclick="disTab()">Second Floor</a></h2>
-
       </div>
     </div>
     <div class="slideshow-container" data-aos="fade-up">
@@ -105,11 +108,11 @@
     <div class="features" data-aos="fade-up">
       <h2 class="fheading">Our features</h2>
 
-      <p class="fp">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Repellendus voluptas minima doloremque, sint facere ad eligendi
-        perspiciatis vitae sequi libero?</p>
+      <p class="fp">Our hostel is equiped with the all-inclusive services go beyond the basics and include housekeeping,<br>
+        maintenance, security, and more.<br> In other words, you'll have all the comforts of home, so you'll feel you never
+        left it.</p>
       <hr />
-      <ul style="display:flex ; justify-content: center;  ">
+      <ul id="ful" style="display:flex ; justify-content: center; ">
 
         <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
         <li class="fli"><img class="fimg" src="./images/f1.png" alt="" /></li>
@@ -119,8 +122,8 @@
 
       </ul>
       <hr />
-      <h4 class="fh4"><a href="">Know more
-          <i class="fa-solid fa-angle-down"></i></a></h4>
+      {{!-- <h4 class="fh4"><a href="">Know more
+          <i class="fa-solid fa-angle-down"></i></a></h4> --}}
     </div>
 
     <footer>
@@ -136,7 +139,8 @@
       </div>
       <div class="footer-bottom">
         <p>Copyright &copy; 2022 |All rights reserved by
-          <span>Nethunt</span></p>
+          <span>Nethunt</span>
+        </p>
       </div>
     </footer>
     <script src="./main.js"></script>
