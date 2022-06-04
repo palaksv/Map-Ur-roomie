@@ -11,12 +11,12 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: #ffe8e8;
+  background-color: #e1eedd;
 }
 .title {
   display: block;
   width: 100%;
-  background: rgb(209, 55, 55);
+  background: #f6c453;
   color: white;
   font-weight: 700;
   border: none;
@@ -33,12 +33,13 @@ body {
   background: #fff;
   padding: 25px 30px;
   border-radius: 5px;
-  border-color: rgb(223, 87, 87);
+  border-color: #f6c453;
 }
 .container .title {
   font-size: 25px;
   font-weight: 500;
   position: relative;
+  text-align: center;
 }
 .container .title::before {
   content: "";
@@ -55,9 +56,10 @@ body {
   justify-content: space-between;
   width: 50rem;
   height: 32rem;
+  margin-left: 7rem;
 }
 .form .user-detail .input-box {
-  margin: 20px 0 12px 0;
+  margin: 20px 0 12px 10px;
   width: calc(100% / 2 -20px);
 }
 .user-detail .input-box .details {
@@ -77,16 +79,18 @@ body {
 }
 .user-detail .input-box input:focus,
 .user-detail .input-box input:valid {
-  border-color: rgb(209, 55, 55);
+  border-color: #f6c453;
 }
 #image-input{
   margin-left: 38%;
 }
 .button {
   height: 45px;
-  margin: 45px 0 10px 18rem;
+  margin-bottom: 100px;
+  margin-left: 25%;
   width: 30rem;
   border-radius: 3px;
+
 }
 .button input {
   height: 100%;
@@ -96,13 +100,13 @@ body {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
-  background: rgb(209, 55, 55);
-  border-color: rgb(209, 55, 55);
+  background: #f6c453;
+  border-color: #f6c453;
   border-radius: 5px;
   text-transform: uppercase;
 }
 .button input:hover {
-  background: rgb(177, 15, 15);
+  background: #f6c453;
 }
 @media (max-width: 584px) {
   .container {
