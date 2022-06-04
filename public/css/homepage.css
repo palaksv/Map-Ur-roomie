@@ -1,3 +1,12 @@
+:root{
+  --Dgreen: #032e0ad3;
+  --Lgreen : #e1eedd;
+  --orange: #f0a04b;
+  --cream: #fefbe9;
+  --yellow: #f6c453;
+}
+
+
 body {
     margin: 0px 0px;
     padding: none;
@@ -11,7 +20,7 @@ body {
   /* Navigation Bar */
   #navbar::before {
     content: "";
-    background-color: #ff4f5a;
+    background-color: var(--Dgreen);
     position: absolute;
     height: 60px;
     width: 100%;
