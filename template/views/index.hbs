@@ -16,6 +16,8 @@
       crossorigin="anonymous"
     ></script>
 
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   </head>
 
   <body>
@@ -54,24 +56,24 @@
       </a>
     </section>
 
-    <div id="main">
-      <div class="floor">
+    <div id="main" data-aos="fade-up">
+      <div class="floor" data-aos="fade-up">
 
         <h2><a href="/floor1" onclick="disTab()" >Ground Floor</a></h2>
 
       </div>
-      <div class="floor">
+      <div class="floor" data-aos="fade-up">
 
         <h2><a href="/floor2" onclick="disTab()">First Floor</a></h2>
 
       </div>
-      <div class="floor">
+      <div class="floor" data-aos="fade-up">
 
         <h2><a href="/floor3" onclick="disTab()">Second Floor</a></h2>
 
       </div>
     </div>
-    <div class="slideshow-container">
+    <div class="slideshow-container" data-aos="fade-up">
 
       <div class="mySlides fade">
         {{! <div class="numbertext">1 / 3</div> }}
@@ -94,13 +96,13 @@
     </div>
     <br />
 
-    <div style="text-align:center" class="dots">
+    <div style="text-align:center" class="dots" data-aos="fade-up">
       <span class="dot"></span>
       <span class="dot"></span>
       <span class="dot"></span>
     </div>
 
-    <div class="features">
+    <div class="features" data-aos="fade-up">
       <h2 class="fheading">Our features</h2>
 
       <p class="fp">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -138,6 +140,10 @@
       </div>
     </footer>
     <script src="./main.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 
 </html>

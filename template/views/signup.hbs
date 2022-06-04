@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="./css/signup.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
     <div class="split-screen">
         <div class="left">
         </div>
-        <div class="right">
+        <div class="right" data-aos="fade-up">
             <section class="googlesignup">
                 <h2>Get Started</h2>
             </section>
             <br>
-            <div class="form">
+            <div class="form" data-aos="fade-up">
                 <div class="input-container">
                     <label for="fname">Full Name</label>
                     <input id="fname" name="fname" type="text" placeholder="Full Name" required>
@@ -80,5 +81,9 @@
             });
     });
 </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </html>
