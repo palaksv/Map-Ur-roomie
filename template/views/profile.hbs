@@ -61,8 +61,8 @@
                     <input type="text" id="langknown" placeholder="Eg:English" required>
                 </div>
             </div>
-            <div class="button" id="regbtn">
-                <input type="submit"  name="Submit" value="Register">
+            <div class="button">
+                <input type="submit" id="subtn"  name="Submit" value="Register">
             </div>
         </div>
     </div>
@@ -70,7 +70,7 @@
 
 <script type="module">
     // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+   /* import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
     import { getDatabase, set, ref, push } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
 
     const firebaseConfig = {
@@ -86,6 +86,7 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
+   
     subtn.addEventListener('click', (err) => {
 
         var fullName = document.getElementById('fName').value;
@@ -114,9 +115,61 @@
             State : State,
             perAdd : perAdd,
             langKnown : langKnown
-        })
-        window.open('/', "_self")
+        });
+        
+        window.open('/login', "_self")
+    }) */
+
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+    import { getDatabase, set, ref, push } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDwb6nqO9VaixY4hqhf53fKPEnUQbt8dQ4",
+        authDomain: "fir-basic-project-c34b5.firebaseapp.com",
+        projectId: "fir-basic-project-c34b5",
+        storageBucket: "fir-basic-project-c34b5.appspot.com",
+        messagingSenderId: "671769167140",
+        appId: "1:671769167140:web:97fbc6d75e4c4cf29e5fb1",
+        measurementId: "G-B97VPMN20N"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    
+    subtn.addEventListener('click', (err) => {
+
+        var fullName = document.getElementById('fName').value;
+        var bDay = document.getElementById('bday').value;
+        var Usn = document.getElementById('usn').value;
+        var branchName = document.getElementById('branch').value;
+        var perNum = document.getElementById('perNo').value;
+        var gaurName = document.getElementById('gname').value;
+        var garOcc = document.getElementById('garocc').value;
+        var garNum = document.getElementById('garnum').value;
+        var altNum = document.getElementById('altnum').value;
+        var State = document.getElementById('state').value;
+        var perAdd = document.getElementById('peradd').value;
+        var langKnown = document.getElementById('langknown').value;
+
+        set(ref(database, 'users/' + Usn), {
+            fullName : fullName,
+            bDay : bDay,
+            Usn : Usn,
+            branchName : branchName,
+            perNum : perNum,
+            gaurName : gaurName,
+            garOcc : garOcc,
+            garNum : garNum,
+            altNum : altNum,
+            State : State,
+            perAdd : perAdd,
+            langKnown : langKnown
+        });
+       
     })
+
+
 </script>
 
 </html>

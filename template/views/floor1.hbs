@@ -28,35 +28,35 @@
             </tr>
             <tr>
                 <td>101</td>
-                <td><a onclick='SelectData()' href="#exampleModalCenter" data-target="#exampleModalCenter"
+                <td><a class="myBtn" id="1DS20CS100" href="#exampleModalCenter" data-target="#exampleModalCenter"
                         data-toggle="modal">Sneha</a></td>
-                <td><a onclick="assign2()" href="#exampleModalCenter" data-target="#exampleModalCenter"
+                <td><a class="myBtn" id="1DS20CS101" href="#exampleModalCenter" data-target="#exampleModalCenter"
                         data-toggle="modal">Shreya</a></td>
-                <td><a onclick="assign3()" href="#exampleModalCenter" data-target="#exampleModalCenter"
-                        data-toggle="modal">Akansha</a></td>
+                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a>
+                </td>
             </tr>
             <tr>
                 <td>102</td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
-                        id="open">Varshitha</a></td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
+                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a>
+                </td>
+                <td><a class="myBtn" id="1DS20CS102" href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
                         id="open">Sakshi</a></td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
-                        id="open">Nidhi</a></td>
+                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a></td>
             </tr>
             <tr>
                 <td>103</td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
+                <td><a class="myBtn" id="1DS20CS104" href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
                         id="open">Nikita</a></td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
+                <td><a class="myBtn" id="1DS20CS105" href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
                         id="open">Ankita</a></td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
-                        id="open">Rupali</a></td>
+                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a>
+                </td>
+
             </tr>
             <tr>
                 <td>104</td>
-                <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a>
-                </td>
+                <td><a class="myBtn" id="1DS20CS106" href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal"
+                        id="open">Rupali</a></td>
                 <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a>
                 </td>
                 <td><a href="#exampleModalCenter" data-target="#exampleModalCenter" data-toggle="modal" id="open">-</a>
@@ -81,7 +81,7 @@
     </div>
 
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+    <div id="exampleModalCenter" class="modal fade" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-aos="fade-up">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -92,16 +92,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-
-
-                    Name : <div id="name"></div>
-                    Branch: <div id="branch"></div>
-                    State: <div id="state"></div>
-                    Languages known: <div id="lang"></div>
-                    Contact number: <div id="number"></div>
-
-
-
+                    <div id="name"></div>
+                    <div id="branch"></div>
+                    <div id="state"></div>
+                    <div id="lang"></div>
+                    <div id="number"></div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -118,7 +113,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
     <script type="module">
         import { getDatabase, set, get, ref, push, child, remove } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
@@ -134,16 +128,15 @@
             measurementId: "G-B97VPMN20N"
         };
 
-
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-        const Usn = "1DS20CS105";
-        function SelectData() {
-                    alert("unsuccessful");
+        function calldataf(Usn) {
             const dbref = ref(database);
-            get(child(dbref, 'users/' + Usn)).then((snapshot) => {
+            get(child(dbref, 'users/'+Usn)).then((snapshot) => {
                 if (snapshot.exists()) {
-                    alert(snapshot.val().State);
+                    document.getElementById('name').innerHTML = "Name: " + snapshot.val().fullName
+                    document.getElementById('branch').innerHTML = "Branch: " + snapshot.val().branchName
+                    document.getElementById('state').innerHTML = "State: " + snapshot.val().State
+                    document.getElementById('lang').innerHTML = "Languages known: " + snapshot.val().langKnown
+                    document.getElementById('number').innerHTML = "Contact number: " + snapshot.val().perNum
                 }
                 else {
                     alert("unsuccessful");
@@ -153,7 +146,12 @@
             });
         }
 
+        $('.myBtn').on('click', function () {
+            calldataf(this.id)
+        })
 
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
     </script>
 
     <script src="./main.js"></script>
