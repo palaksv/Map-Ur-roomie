@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="split-screen">
+        <div class="left">
+        </div>
+        <div class="right">
+            <div class="rightalign">
+                <section>
+                    <button class="google-btn">Log In with Google</button>
+                </section>
+                <div class="form">
+                    <br>
+                    <div class="ordiv">
+                        <hr>
+                        <div class="or">or</div>
+                    </div>
+                    <div class="input-container">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" placeholder="Password" required>
+                        <i class="far fa-eye-slash"></i>
+                    </div>
+                    <button class="register-btn" id="login" type="submit">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDwb6nqO9VaixY4hqhf53fKPEnUQbt8dQ4",
+        authDomain: "fir-basic-project-c34b5.firebaseapp.com",
+        projectId: "fir-basic-project-c34b5",
+        storageBucket: "fir-basic-project-c34b5.appspot.com",
+        messagingSenderId: "671769167140",
+        appId: "1:671769167140:web:97fbc6d75e4c4cf29e5fb1",
+        measurementId: "G-B97VPMN20N"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth(app);
+
+    login.addEventListener('click', (err) => {
+        console.log("err");
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                window.open('/', "_self")
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert("Please check your password or email")
+            });
+    });
+</script>
+
+</html>
