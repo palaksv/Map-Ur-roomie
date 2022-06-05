@@ -112,7 +112,7 @@ body {
   border: 0px;
   margin-top: 1rem;
   padding: 10px;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 #schedule:hover{
   background-color: var(--orange);
