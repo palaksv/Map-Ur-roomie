@@ -456,3 +456,17 @@ iframe{
   height: 500px;
   /* filter: invert(100%); */
 }
+.chat{
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+}
+.chat:hover{
+  cursor: pointer;
+}
+#chatimg{
+  height: 5rem;
+  width: 5rem;
+}
