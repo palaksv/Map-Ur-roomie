@@ -6,7 +6,11 @@
   --yellow: #f6c453;
   --black: #2b2b2b;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
+
   margin: 0px 0px;
   padding: none;
 }
@@ -31,7 +35,9 @@ body {
   align-items: center;
   height: 60px;
   padding-bottom: 0.7rem;
-  position: relative;
+  /* margin-left: 20rem; */
+  width: 100vw;
+  position: fixed;
 }
 /* Navigation Bar: logo and image */
 #logo {
