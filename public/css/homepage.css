@@ -104,7 +104,7 @@ body {
   /* padding: 4px 200px 100px; */
   /* align-items: center; */
   /* justify-content: center; */
-  height: 35rem;
+  height: 50rem;
 }
 #schedule{
   background-color:var(--yellow);
@@ -119,9 +119,11 @@ body {
 }
 #homeleft{
   padding: 7rem;
+  padding-top: 15rem;
 }
 #homeright{
   margin-top: 3rem ;
+  padding-top: 8rem;
 }
 #homeimg{
   /* background:url("../images/login.png"); */
