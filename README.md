@@ -2,7 +2,7 @@
 > This is a website where you can view the details of your roommates beforehand and book the hostel room according to your preferences.
 
 
----
+
 
 ##  Project Workflow
 
@@ -11,7 +11,7 @@ If you want to book the room, there is a contact us option on the homepage which
 
 
 
----
+
 ## Future enhancements
 >* Enhancing the user experience
 >* Creating separate dashboards for student and management
